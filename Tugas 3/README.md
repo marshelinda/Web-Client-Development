@@ -45,7 +45,6 @@ Output dari file JavaScript adalah:
 
 
 ### Fungsi dan Parameter
-
 Berikut adalah detail spesifik fungsi dan parameter yang digunakan dalam script:
 
 #### 1. `addEventListener()`
