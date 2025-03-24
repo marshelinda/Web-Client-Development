@@ -78,15 +78,13 @@ Berikut adalah detail spesifik fungsi dan parameter yang digunakan dalam script:
   ```
   - Tidak memiliki parameter. Fungsi ini mengembalikan gaya tombol ke keadaan semula ketika mouse tidak lagi berada di atasnya.
 
-  Tentu! Berikut ini adalah contoh file `README.md` untuk proyek "WorkoutAja". Anda dapat menyesuaikan konten sesuai dengan kebutuhan dan informasi spesifik proyek Anda.
-
+ 
 ## Cara Menjalankan Proyek
 
 1. **Clone Repository**: 
    ```bash
    git clone https://github.com/marshelinda/Web-Client-Develompmet.git
    ```
-   Gantilah `username` dengan nama pengguna GitHub Anda.
 
 2. **Navigasi ke Folder Proyek**:
    ```bash
