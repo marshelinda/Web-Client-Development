@@ -1,9 +1,19 @@
-"use strict";
-function isPalindrome(input) {
-    const cleanedInput = input.replace(/[^a-zA-Z0-9]/g, '').toLowerCase(); // Remove non-alphanumeric chars and convert to lowercase
-    const reversedInput = cleanedInput.split('').reverse().join('');
-    return cleanedInput === reversedInput;
+function isPalindrome(str: string): boolean {
+    // Convert the string to lowercase and remove non-alphanumeric characters
+    const cleanedStr: string = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+    // Compare the cleaned string with its reverse
+    const reversedStr: string = cleanedStr.split('').reverse().join('');
+
+    return cleanedStr === reversedStr;
 }
-// Example usage:
-const palindromeCheck = 'madam';
-console.log(`${palindromeCheck} → ${isPalindrome(palindromeCheck) ? 'palindrome' : 'not palindrome'}`); // Output: madam → palindrome
+
+// Example usage
+const inputString: string = "madam";
+const result: boolean = isPalindrome(inputString);
+
+if (result) {
+    console.log(`"${inputString}" is a palindrome.`);
+} else {
+    console.log(`"${inputString}" is not a palindrome.`);
+}
