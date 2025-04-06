@@ -43,16 +43,12 @@ Output dari file JavaScript adalah:
 - **Alert**: Pesan yang muncul saat tombol diklik, berisi teks "Terima kasih telah menghubungi kami!".
 - **Gaya tombol**: Menambahkan efek glow pada tombol saat mouse hover dan menghilangkannya saat mouse tidak lagi hover.
 
-
-### Fungsi dan Parameter
-
-Berikut adalah detail spesifik fungsi dan parameter yang digunakan dalam script:
-
-#### 1. `addEventListener()`
-- **Fungsi**: Menambahkan pendengar untuk event.
-- **Parameter**:
-  - **Event Type**: `'click'`, `'mouseover'`, `'mouseout'` (tipe event yang ingin didengarkan).
-  - **Callback Function**: Fungsi yang akan dieksekusi saat event terjadi.
+    #### Function dan Parameter
+        #### 1. `addEventListener()`
+        - **Fungsi**: Menambahkan pendengar untuk event.
+        - **Parameter**:
+        - **Event Type**: `'click'`, `'mouseover'`, `'mouseout'` (tipe event yang ingin didengarkan).
+        - **Callback Function**: Fungsi yang akan dieksekusi saat event terjadi.
 
 #### 2. Callback Functions
 - **Click Event Callback**
@@ -71,15 +67,13 @@ Berikut adalah detail spesifik fungsi dan parameter yang digunakan dalam script:
   ```
   - Tidak memiliki parameter. Fungsi ini mengubah gaya tombol ketika mouse berada di atasnya.
 
-- **Mouseout Event Callback**
-  ```javascript
-  function() {
-      glowButton.style.boxShadow = 'none'; 
-  }
-  ```
-  - Tidak memiliki parameter. Fungsi ini mengembalikan gaya tombol ke keadaan semula ketika mouse tidak lagi berada di atasnya.
-
-  Tentu! Berikut ini adalah contoh file `README.md` untuk proyek "WorkoutAja". Anda dapat menyesuaikan konten sesuai dengan kebutuhan dan informasi spesifik proyek Anda.
+                - **Mouseout Event Callback**
+                ```javascript
+                function() {
+                    glowButton.style.boxShadow = 'none'; 
+                }
+                ```
+                - Tidak memiliki parameter. Fungsi ini mengembalikan gaya tombol ke keadaan semula ketika mouse tidak lagi berada di atasnya.
 
 ## Cara Menjalankan Proyek
 
