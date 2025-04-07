@@ -2,7 +2,7 @@
 
 ## Definisi
 
-Portofolio web ini adalah platform digital yang dirancang secara profesional untuk menampilkan karya, keahlian, dan pengalaman Anda di bidang [sebutkan bidang keahlian Anda, contoh: Desain UI/UX, Pengembangan Front-End, Full-Stack Development, dll.]. Website ini bertujuan untuk memberikan gambaran komprehensif tentang kemampuan dan proyek-proyek unggulan Anda kepada calon klien, perekrut, dan kolega.
+Portofolio web ini adalah platform digital yang dirancang secara profesional untuk menampilkan karya, keahlian, dan pengalaman Anda. Website ini bertujuan untuk memberikan gambaran komprehensif tentang kemampuan dan proyek-proyek unggulan Anda kepada calon klien, perekrut, dan kolega.
 
 ## Fungsi
 
@@ -15,7 +15,7 @@ Portofolio web ini adalah platform digital yang dirancang secara profesional unt
 
 * **Beranda (Home):** Sambutan hangat, pengenalan diri singkat, dan tampilan visual yang menarik perhatian.
 * **Tentang Saya (About):** Halaman detail mengenai profil profesional, filosofi kerja, dan keahlian yang relevan.
-* **Portofolio (Work/Projects):** Galeri proyek yang menampilkan deskripsi mendalam, teknologi yang digunakan, dan tautan (jika tersedia) ke demo langsung atau kode sumber.
+* **Portofolio (Work/Projects):** Galeri proyek yang menampilkan deskripsi mendalam, teknologi yang digunakan, dan tautan kode sumber.
 * **Pendidikan (Education):** Rincian mengenai riwayat pendidikan formal dan sertifikasi yang relevan.
 * **Kontak (Contact):** Formulir interaktif untuk mengirim pesan langsung dan informasi kontak lainnya (email, LinkedIn, dll.).
 * **Footer:** Informasi hak cipta, tautan ke media sosial profesional, dan navigasi tambahan.
@@ -30,7 +30,6 @@ Website ini dibangun menggunakan teknologi berikut:
 * **[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript):** Bahasa pemrograman utama untuk interaktivitas.
 * **[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML):** Bahasa markup standar untuk struktur konten web.
 * **[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS):** Bahasa *stylesheet* untuk desain visual.
-* **[Nama Library/Tools Lainnya yang Digunakan (misalnya, library routing, state management, dll.)]**
 
 ## Instalasi Lokal
 
