@@ -1,17 +1,17 @@
 # Portofolio Web - Menampilkan Karya dan Keahlian Anda
 
-## 🌟 Ikhtisar
+## Definisi
 
 Portofolio web ini adalah platform digital yang dirancang secara profesional untuk menampilkan karya, keahlian, dan pengalaman Anda di bidang [sebutkan bidang keahlian Anda, contoh: Desain UI/UX, Pengembangan Front-End, Full-Stack Development, dll.]. Website ini bertujuan untuk memberikan gambaran komprehensif tentang kemampuan dan proyek-proyek unggulan Anda kepada calon klien, perekrut, dan kolega.
 
-## 🎯 Tujuan Utama
+## Fungsi
 
 * **Presentasi Karya Unggulan:** Memamerkan proyek-proyek terpilih melalui visual yang menarik dan deskripsi yang informatif.
 * **Informasi Profesional:** Menyediakan detail mengenai latar belakang pendidikan, pengalaman kerja yang relevan, dan kompetensi teknis.
 * **Fasilitasi Kontak Profesional:** Memungkinkan pengunjung untuk terhubung dengan mudah melalui informasi kontak dan formulir yang disediakan.
 * **Penguatan Personal Branding:** Menciptakan identitas digital yang kuat dan profesional.
 
-## ⚙️ Fitur Utama
+## Fitur Utama
 
 * **Beranda (Home):** Sambutan hangat, pengenalan diri singkat, dan tampilan visual yang menarik perhatian.
 * **Tentang Saya (About):** Halaman detail mengenai profil profesional, filosofi kerja, dan keahlian yang relevan.
@@ -21,7 +21,7 @@ Portofolio web ini adalah platform digital yang dirancang secara profesional unt
 * **Footer:** Informasi hak cipta, tautan ke media sosial profesional, dan navigasi tambahan.
 * **Desain Responsif:** Tata letak yang optimal dan fungsional di berbagai ukuran layar dan perangkat.
 
-## 🛠️ Teknologi yang Digunakan
+## Teknologi yang Digunakan
 
 Website ini dibangun menggunakan teknologi berikut:
 
@@ -32,7 +32,7 @@ Website ini dibangun menggunakan teknologi berikut:
 * **[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS):** Bahasa *stylesheet* untuk desain visual.
 * **[Nama Library/Tools Lainnya yang Digunakan (misalnya, library routing, state management, dll.)]**
 
-## 🚀 Instalasi Lokal
+## Instalasi Lokal
 
 Untuk menjalankan website portofolio ini di lingkungan pengembangan lokal Anda, ikuti langkah-langkah berikut:
 
@@ -57,4 +57,4 @@ Untuk menjalankan website portofolio ini di lingkungan pengembangan lokal Anda, 
     # atau
     yarn start
     ```
-    Ini akan memulai aplikasi portofolio di *browser* Anda, biasanya di `http://localhost:3000`.
+    Ini akan memulai aplikasi portofolio di *browser* Anda, biasanya di `http://localhost:5173`.
