@@ -104,8 +104,8 @@ Digunakan untuk menyimpan state berikut:
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/nama-kamu/pokemon-ui
-cd pokemon-ui
+git clone https://github.com/marshelinda/Tugas 5
+cd "Tugas 5"
 ```
 
 ### 2. Install Dependency
@@ -124,19 +124,4 @@ Buka di browser:
 ```
 http://localhost:5173
 ```
-
 ---
-
-## Dibuat oleh
-
-**Nama:** Marshelinda 
-**Mata Kuliah:** Web Client Development  
-**Tugas:** Tugas 5 - Aplikasi React Hooks (Pokémon UI)
-
----
-
-## Lisensi
-
-Proyek ini bebas digunakan untuk pembelajaran dan tugas akademik. Tidak untuk tujuan komersial tanpa izin.
-
-```
