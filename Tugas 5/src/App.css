@@ -1,118 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
+  background-color: #0e103d;
+  font-family: sans-serif;
 }
 
-.app-container {
+#root {
   width: 320px;
   height: 568px;
-  background-color: #1c1e3c;
-  color: white;
-  font-family: sans-serif;
+  margin: 0 auto;
+  background-color: #0e103d;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  border-radius: 0; 
+  position: relative;
 }
 
-.header-container {
+#root::-webkit-scrollbar {
+  display: none;
+}
+
+/* === APP CONTAINER === */
+.app-container {
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #1c1e3c;
+  overflow-y: auto;
+}
+
+.app-container.no-scroll {
+  overflow: hidden;
+}
+
+/* === HEADER === */
+.header-container {
   width: 320px;
   height: 48px;
-  border-width: 1px;
   background-color: #181b3a;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
-  box-sizing: border-box;
   border-bottom: 1px solid #333756;
+  box-sizing: border-box;
 }
 
+/* === LOGO POKEMON === */
 .pokemon-logo {
+  width: 100px;
   height: 70px;
-  width : 100px;
-  margin-top : -20px;
-  left : 21px;
-  margin-left : -6px;
   object-fit: contain;
+  margin-top: -20px;
+  margin-left: -6px;
 }
 
-.search-icon {
-  width: 20px;
-  height: 19px;
-  stroke: white;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
-  margin-right: 8px; 
-  margin-top: 0px;    
+/* === SEARCH ICON === */
+.search-icon-wrapper {
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
 
+.search-icon {
+  width: 16px;
+  height: 16px;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: relative;
+}
+
+.search-icon::after {
+  content: '';
+  width: 8px;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  transform: rotate(45deg);
+  border-radius: 1px;
+}
+
+/* === SEARCH INPUT === */
 .search-input {
   width: 144px;
   height: 26px;
-  top: 11px;
-  left: 149px;
-  border-radius: 8px;
-  border-width: 1px;
-  border: 1px solid #3D4466;
-  color: #97A0CC;
-  background-color: #f8f8f8;
-  font-family: DM Sans;
-  font-weight: 400;
+  padding-left: 8px;
   font-size: 14px;
-  line-height: 14px;
-  letter-spacing: 0%;
-  text-align: left;
+  border: 1px solid #3d4466;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  color: #1c1e3c;
   margin-right: 8px;
+  font-family: "DM Sans", sans-serif;
 }
 
-.scroll-content {
-  flex: 1;
-  overflow-y: auto;
-  scrollbar-width: none;
-}
-
-.scroll-content::-webkit-scrollbar {
-  display: none;
-}
-
+/* === CONTROLS: DROPDOWN + GRID TOGGLE === */
 .controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 16px;
+  height: 48px;
+  background-color: #1c1e3c;
+  box-sizing: border-box;
 }
 
 .sort-dropdown {
-  padding: 8px;
+  width: 186px;
+  height: 32px;
+  padding: 4px 8px;
   border-radius: 8px;
   border: none;
   background-color: #2a2d4e;
   color: white;
+  font-size: 14px;
 }
 
+/* === GRID TOGGLE === */
 .layout-toggle {
   display: flex;
-  border-radius: 10px;
   background-color: #2a2d4e;
+  border-radius: 10px;
   overflow: hidden;
 }
 
 .layout-icon {
-  padding: 8px;
+  width: 70px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
   cursor: pointer;
   color: #aaa;
 }
@@ -120,4 +150,16 @@ html, body {
 .layout-icon.selected {
   background-color: #1c1e3c;
   color: white;
+}
+
+/* === CONTENT SCROLL === */
+.scroll-content {
+  flex: 1;
+  overflow-y: auto;
+  max-height: calc(568px - 48px - 48px); 
+  scrollbar-width: none;
+}
+
+.scroll-content::-webkit-scrollbar {
+  display: none;
 }

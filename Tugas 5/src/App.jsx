@@ -1,13 +1,18 @@
 import "./App.css";
-import PokemonList from "./components/Pokemon List/PokemonList";
 import { useState } from "react";
+import PokemonList from "./components/Pokemon List/PokemonList";
 import PokemonDetail from "./components/Pokemon Detail/PokemonDetail";
 import logo from "./assets/pokemon-logo.png";
 
 function App() {
   const [selectedPokemon, setSelectedPokemon] = useState(null);
   const [isSearchActive, setIsSearchActive] = useState(false);
-  const [searchTerm, setSearchTerm] = useState(""); 
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearchToggle = () => setIsSearchActive(true);
+  const handleSearchBlur = () => setIsSearchActive(false);
+  const handleSearchChange = (e) => setSearchTerm(e.target.value);
+  const handleCloseDetail = () => setSelectedPokemon(null);
 
   return (
     <div className={`app-container ${selectedPokemon ? "no-scroll" : ""}`}>
@@ -19,33 +24,27 @@ function App() {
             type="text"
             className="search-input"
             placeholder="Search..."
-            onBlur={() => setIsSearchActive(false)}
+            onBlur={handleSearchBlur}
             autoFocus
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)} 
+            onChange={handleSearchChange}
           />
         ) : (
-          <svg
-            className="search-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            onClick={() => setIsSearchActive(true)}
-          >
-            <circle cx="11" cy="11" r="8" />
-            <line x1="21" y1="21" x2="16.65" y2="16.65" />
-          </svg>
+          <div className="search-icon-wrapper" onClick={handleSearchToggle}>
+            <div className="search-icon" />
+          </div>
         )}
       </div>
 
       {selectedPokemon ? (
         <PokemonDetail
           pokemon={selectedPokemon}
-          onClose={() => setSelectedPokemon(null)}
+          onClose={handleCloseDetail}
         />
       ) : (
         <PokemonList
           onSelectPokemon={setSelectedPokemon}
-          searchTerm={searchTerm} 
+          searchTerm={searchTerm}
         />
       )}
     </div>

@@ -6,7 +6,7 @@ function PokemonDetail({ pokemon, onClose }) {
     ? pokemon.id
     : parseInt(String(pokemon.id).replace(/\D/g, ""));
 
-  const paddedId = `#${String(numericId).padStart(4, '0')}`;
+  const paddedId = `#${String(numericId).padStart(4, "0")}`;
   const largeImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${numericId}.png`;
   const smallSprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${numericId}.png`;
 
@@ -21,13 +21,10 @@ function PokemonDetail({ pokemon, onClose }) {
         <span className="pokemon-id">{paddedId}</span>
         <button className="close-button" onClick={onClose}>✕</button>
       </div>
+
       <img src={largeImage} alt={pokemon.name} className="pokemon-large-img" />
       <h1 className="pokemon-name-detail">{pokemon.name}</h1>
-        <img
-          className="pokemon-sprite-detail"
-          src={smallSprite}
-          alt={pokemon.name}
-        />
+      <img src={smallSprite} alt={pokemon.name} className="pokemon-sprite-detail" />
 
       <div className="pokemon-stats-box">
         <div className="stat health">

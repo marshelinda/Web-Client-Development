@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+
+import React, { useState, useMemo } from "react";
 import PokemonCard from "../Pokemon Card/PokemonCard";
 import PokemonDetail from "../Pokemon Detail/PokemonDetail";
 import "./PokemonList.css";
@@ -42,27 +43,25 @@ function PokemonList({ searchTerm = "" }) {
         stats: data.stats,
       };
       setSelectedPokemon(selected);
-    } catch (error) {
-      console.error("Gagal ambil data detail:", error);
-      setSelectedPokemon(pokemon);
+    } catch (err) {
+      console.error("Failed to fetch details:", err);
+      setSelectedPokemon({
+        ...pokemon,
+        sprite: pokemon.image,
+        stats: [],
+      });
     }
   };
 
   const closeDetail = () => setSelectedPokemon(null);
-  const allTypes = [...new Set(pokemonData.map((p) => p.type))];
+
+  const allTypes = useMemo(() => [...new Set(pokemonData.map(p => p.type))], []);
+
   const filteredData = pokemonData
-    .filter((pokemon) =>
-      pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-    .filter((pokemon) => {
-      if (sortBy.startsWith("type:")) {
-        const type = sortBy.split(":")[1];
-        return pokemon.type === type;
-      }
-      return true;
-    })
+    .filter(p => p.name.toLowerCase().includes(searchTerm.toLowerCase()))
+    .filter(p => sortBy.startsWith("type:") ? p.type === sortBy.split(":")[1] : true)
     .sort((a, b) => {
-      if (sortBy === "id") {
+      if (sortBy === "id" || sortBy === "default") {
         return parseInt(a.id.slice(1)) - parseInt(b.id.slice(1));
       } else if (sortBy === "name") {
         return a.name.localeCompare(b.name);
@@ -85,7 +84,7 @@ function PokemonList({ searchTerm = "" }) {
               <option value="default">Sort by</option>
               <option value="id">ID</option>
               <option value="name">Name</option>
-              {allTypes.map((type) => (
+              {allTypes.map(type => (
                 <option key={type} value={`type:${type}`}>
                   Type: {type}
                 </option>
@@ -96,30 +95,25 @@ function PokemonList({ searchTerm = "" }) {
               <button
                 className={`grid-toggle-button ${!isTwoGrid ? "active" : ""}`}
                 onClick={() => setIsTwoGrid(false)}
+                aria-label="One grid"
               >
-                <span className="grid-icon">◼</span>
+                ◼
               </button>
               <button
                 className={`grid-toggle-button ${isTwoGrid ? "active" : ""}`}
                 onClick={() => setIsTwoGrid(true)}
+                aria-label="Two grid"
               >
-                <span className="grid-icon">
-                  <div style={{
-                    display: "grid", gridTemplateColumns: "repeat(2, 5px)", gap: "2px"
-                  }}>
-                    <div style={{ width: 5, height: 5, background: "#bfc6f9" }} />
-                    <div style={{ width: 5, height: 5, background: "#bfc6f9" }} />
-                    <div style={{ width: 5, height: 5, background: "#bfc6f9" }} />
-                    <div style={{ width: 5, height: 5, background: "#bfc6f9" }} />
-                  </div>
-                </span>
+                <div className="two-grid-icon">
+                  <div /><div /><div /><div />
+                </div>
               </button>
             </div>
           </div>
 
           <div className="pokemon-list-scrollable">
-            <div className={`pokemon-list ${isTwoGrid ? "two-grid" : "one-grid"}`}>
-              {filteredData.map((pokemon) => (
+            <div className={`pokemon-list ${isTwoGrid ? "two-grid-mode" : ""}`}>
+              {filteredData.map(pokemon => (
                 <PokemonCard
                   key={pokemon.id}
                   {...pokemon}

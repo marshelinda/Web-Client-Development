@@ -1,14 +1,14 @@
 .pokemon-list-container {
-  width: 320px;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: ##1e2144;
+  background-color: #1e2144;
   border-radius: 12px 0 0 12px;
   padding: 0;
   box-sizing: border-box;
   position: relative;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 .pokemon-list-header {
@@ -19,23 +19,9 @@
   box-sizing: border-box;
 }
 
-.pokemon-list-scrollable {
-  flex: 1;
-  overflow-y: auto;
-  padding-bottom: 16px;
-  scrollbar-width: none;
-  margin-top: -5px
-}
-
-.pokemon-list-scrollable::-webkit-scrollbar {
-  display: none;
-}
-
 .sort-select {
   width: 186px;
   height: 32px;
-  top: 64px;
-  left: 21px;
   background-color: #3d4166;
   color: #bfc6f9;
   border-radius: 8px;
@@ -50,8 +36,8 @@
   height: 32px;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #0b0d2b; 
-  border: none; 
+  background-color: #0c1231;
+  border: none;
 }
 
 .grid-toggle-button {
@@ -59,7 +45,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent; 
+  background-color: transparent;
+  color: #97a0cc;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -68,8 +55,8 @@
 }
 
 .grid-toggle-button.active {
-  background-color: #3d4166; 
-  border-radius: 0px; 
+  background-color: #3d4466;
+  border-radius: 0;
 }
 
 .grid-icon {
@@ -79,11 +66,45 @@
   font-size: 14px;
 }
 
-.pokemon-list {
+.two-grid-icon {
   display: grid;
-  gap: 8px;
-  padding: 12px 10px;
-  box-sizing: border-box;
+  grid-template-columns: repeat(2, 5px);
+  gap: 2px;
+}
+
+.two-grid-icon div {
+  width: 5px;
+  height: 5px;
+  background: #bfc6f9;
+}
+
+.pokemon-list-scrollable {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 16px;
+  margin-top: -5px;
+  scrollbar-width: none;
+}
+
+.pokemon-list-scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+.pokemon-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 24px;
+}
+
+.pokemon-list.two-grid-mode {
+  display: grid;
+  grid-template-columns: repeat(2, 128px);
+  justify-content: center;
+  gap: 16px;
+  padding-top: 24px;
+  margin-right: 14px;
 }
 
 .pokemon-list.one-grid {

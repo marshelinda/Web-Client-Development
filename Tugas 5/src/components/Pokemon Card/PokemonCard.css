@@ -12,8 +12,6 @@
 .one-grid {
   width: 279px;
   height: 240px;
-  left: 112px;
-  left: 21px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,23 +30,16 @@
 }
 
 .type {
-  font-family: DM Sans;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 700;
   font-size: 16px;
-  line-height: 12px;
-  letter-spacing: 0%;
-  vertical-align: middle;
   color: #11B047;
 }
 
 .id {
-  font-family: DM Sans;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 700;
   font-size: 16px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  text-align: right;
-  vertical-align: middle;
   color: #263156;
 }
 
@@ -62,30 +53,28 @@
 }
 
 .pokemon-image {
-  width: 178.11px;
+  width: 178px;
   height: 173px;
-  top: 142px;
-  left: 71.45px;
+  object-fit: contain;
 }
 
 .pokemon-name {
-  font-family: DM Sans;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 700;
   font-size: 18px;
-  line-height: 18px;
-  letter-spacing: 0%;
   text-align: center;
-  font-weight: bold;
   color: #212E4C;
+  text-transform: capitalize;
+  margin-top: 8px;
 }
 
 /* Two-grid mode */
 .pokemon-list.two-grid-mode {
   display: grid;
-  grid-template-columns: repeat(2, 128px); 
+  grid-template-columns: repeat(2, 128px);
   gap: 16px;
   justify-content: center;
-  padding-top: 112px; 
+  padding-top: 112px;
 }
 
 .two-grid {
@@ -126,20 +115,17 @@
 .two-grid .pokemon-image {
   width: 90px;
   height: 90px;
-  top: 152px;
-  left: 40px;
-  margin-top: 16px;
+  margin-top: 24px;
   object-fit: contain;
 }
 
 .two-grid .pokemon-name {
-  font-family: DM Sans;
-  margin-top: 6px;
+  font-family: 'DM Sans', sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: #212E4C;
   text-align: center;
+  margin-top: 6px;
+  text-transform: capitalize;
   line-height: 14px;
-  line-spasing: 0%;
-  white-space: pre-line; 
 }
