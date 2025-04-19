@@ -1,0 +1,66 @@
+.pokemon-card {
+  background-color: #F0F3FF;
+  color: white;
+  border-radius: 16px;
+  padding: 12px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.03);
+}
+
+/* One Grid ukuran */
+.pokemon-card.one {
+  width: 279px; /* Ukuran kartu untuk one grid */
+  height: 240px;
+}
+
+.pokemon-card.one img {
+  width: 178.107px; /* Ukuran gambar sesuai permintaan */
+  height: 173px;
+  top: 142px; /* Posisi gambar sesuai permintaan */
+  left: 71.45px; /* Posisi gambar sesuai permintaan */
+}
+
+/* Two Grid ukuran */
+.pokemon-card.two {
+  width: 128px; /* Ukuran kartu untuk two grid */
+  height: 180px;
+}
+
+.pokemon-card.two img {
+  width: 90px; /* Ukuran gambar sesuai permintaan */
+  height: 90px;
+  top: 152px; /* Posisi gambar sesuai permintaan */
+  left: 40px; /* Posisi gambar sesuai permintaan */
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.type {
+  color: #11B047;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.id {
+  font-size: 16px;
+  color: #212E4C;
+}
+
+.card-name {
+  margin-top: 8px;
+  font-size: 18px;
+  color: #212E4C;
+  text-transform: capitalize;
+  font-weight: bold;
+}

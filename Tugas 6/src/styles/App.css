@@ -1,0 +1,12 @@
+.app {
+  background-color: #2b2d42;
+  min-height: 100vh;
+  padding: 16px;
+  font-family: DM Sans;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}

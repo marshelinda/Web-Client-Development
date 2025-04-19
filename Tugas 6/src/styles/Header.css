@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2b2d42;
+  border-bottom: 1px solid #3D4466;
+}
+
+.logo {
+  width: 97px;
+  height: 35px;
+  margin-top: -15px; /* naikin logo ke atas sedikit */
+  object-fit: contain;
+}
+
+.search-area {
+  position: relative;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-icon {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  width: 20px;
+  height: 19px;
+}
+
+.search-icon:hover {
+  transform: scale(1.1);
+}
+
+.search-input {
+  background-color: #ffffff;  /* warna latar belakang gelap */
+  border: 1px solid #3D4466;     /* garis tepi */
+  padding: 6px 10px;
+  border-radius: 8px;         /* bikin ujung kotak jadi rounded */
+  font-size: 14px;
+  width: 144px;               /* ubah lebar input */
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #888;                /* warna placeholder */
+}

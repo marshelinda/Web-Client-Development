@@ -1,0 +1,136 @@
+.pokemon-detail-card {
+  background-color: #2b2d42;
+  border-radius: 20px;
+  padding: 24px;
+  color: white;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0px;
+}
+
+.detail-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Tetap pisah kanan kiri */
+  align-items: center;
+  padding: 0 425px; /* Ubah dari 24px ke 60px biar lebih ke tengah */
+  margin-top: 0px;
+  margin-bottom: 0px;
+  box-sizing: border-box;
+}
+
+
+.back-button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.pokemon-id {
+  color: #97A0CC;
+  font-size: 18px;
+}
+
+.pokemon-image {
+  width: 200px;
+  Height: 200px;
+  object-fit: contain;
+}
+
+.pokemon-name {
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.mini-image {
+  width: 127px;
+  height: 127px;
+}
+
+.stat-card {
+  background-color:#05091B;
+  padding: 16px;
+  border-radius: 16px;
+  width: 272px;
+  height: 154px;
+}
+
+.stat-title {
+  font-size: 16px;
+  margin-bottom: 4px;
+  color: #cbd5e1;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #374151;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-bar .filled {
+  height: 100%;
+  background-color: #22c55e;
+}
+
+.health-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.health-from {
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.divider {
+  border-top: 1px solid #4b5563; /* abu gelap */
+  width: 100%;
+  margin: 12px 0;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-right: 50px;
+}
+
+.label {
+  font-size: 16px;
+  color: #97A0CC;
+  margin: 0;
+}
+
+.value {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+/* Responsif mobile */
+@media (max-width: 500px) {
+  .pokemon-detail-card {
+    padding: 16px;
+  }
+
+  .pokemon-name {
+    font-size: 36px;
+  }
+
+  .stat-card {
+    width: 100%;
+  }
+}
