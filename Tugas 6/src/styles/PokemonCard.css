@@ -13,30 +13,30 @@
   transform: scale(1.03);
 }
 
-/* One Grid ukuran */
+/* One Grid */
 .pokemon-card.one {
-  width: 279px; /* Ukuran kartu untuk one grid */
+  width: 279px; 
   height: 240px;
 }
 
 .pokemon-card.one img {
-  width: 178.107px; /* Ukuran gambar sesuai permintaan */
+  width: 178.107px; 
   height: 173px;
-  top: 142px; /* Posisi gambar sesuai permintaan */
-  left: 71.45px; /* Posisi gambar sesuai permintaan */
+  top: 142px; 
+  left: 71.45px; 
 }
 
-/* Two Grid ukuran */
+/* Two Grid */
 .pokemon-card.two {
-  width: 128px; /* Ukuran kartu untuk two grid */
+  width: 128px; 
   height: 180px;
 }
 
 .pokemon-card.two img {
-  width: 90px; /* Ukuran gambar sesuai permintaan */
+  width: 90px; 
   height: 90px;
-  top: 152px; /* Posisi gambar sesuai permintaan */
-  left: 40px; /* Posisi gambar sesuai permintaan */
+  top: 152px;
+  left: 40px; 
 }
 
 .card-top {

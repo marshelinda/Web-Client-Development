@@ -5,6 +5,16 @@
   font-family: DM Sans;
 }
 
+body {
+  background-color: #2b2d42; 
+  color: white; 
+  margin: 0;
+}
+
+.pokemon-detail-card, .pokemon-list, .detail-header {
+  background-color: #2b2d42; 
+}
+
 .main-content {
   display: flex;
   justify-content: center;

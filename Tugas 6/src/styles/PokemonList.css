@@ -6,41 +6,39 @@
   padding: 20px;
 }
 
-/* One Grid: 1 kartu per baris */
+/* One Grid */
 .pokemon-list.one {
   flex-direction: column;
   align-items: center;
 }
 
-/* Two Grid: 2 kartu sejajar */
+/* Two Grid */
 .pokemon-list.two {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 kartu per baris */
-  gap: 10px; /* Mengatur jarak antar kartu secara vertikal dan horizontal */
-  justify-items: center; /* Menjaga kartu agar terpusat di tengah */
-  max-width: 0px; /* Membatasi lebar grid */
-  margin: 0 auto; /* Agar grid berada di tengah layar */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 10px; 
+  justify-items: center; 
+  max-width: 0px; 
+  margin: 0 auto; 
 }
 
-/* Kontainer utama untuk Pokémon list */
 .pokemon-list-container {
-  position: relative; /* Memastikan bahwa elemen lain bisa disusun secara relatif */
+  position: relative; 
   width: 100%;
 }
 
-/* Kontainer untuk tombol Sort dan Grid Toggle */
 .pokemon-list-controls {
   display: flex;
-  justify-content: flex-end; /* Posisikan tombol di sebelah kanan */
+  justify-content: space-between;
+  position: relative;
   align-items: center;
-  right: 0; /* Posisikan kontainer di kanan */
-  top: 20px; /* Memberikan sedikit ruang dari atas */
-  width: auto; /* Sesuaikan lebar kontainer dengan isinya */
-  padding: 0 20px; /* Padding kiri dan kanan sedikit */
-  z-index: 1000; /* Pastikan tombol di atas elemen lainnya */
+  right: 0; 
+  top: 0px;
+  width: auto; 
+  padding: 0 20px; 
+  z-index: 1000; 
 }
 
-/* Sort select (kiri di dalam kontainer) */
 .sort-select {
   width: 186px;
   height: 32px;
@@ -49,19 +47,17 @@
   border-radius: 8px;
   border: 1px solid #333756;
   font-size: 14px;
-  margin-right: 10px; /* Memberikan spasi di antara tombol Sort dan Grid Toggle */
+  margin-right: 10px; 
 }
 
-/* Grid toggle (kanan) */
 .grid-toggle-box {
   display: flex;
-  justify-content: flex-end; /* Grid Toggle tetap di kanan */
+  justify-content: flex-end; 
   gap: 10px;
 }
 
-/* Tombol Grid Toggle */
 .grid-toggle-button {
-  flex: 0 0 auto; /* Tombol tetap pada ukuran default dan tidak berubah posisinya */
+  flex: 0 0 auto; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,17 +67,15 @@
   cursor: pointer;
   padding: 0;
   transition: background-color 0.2s ease;
-  width: 32px; /* Ukuran tombol tetap */
-  height: 32px; /* Ukuran tombol tetap */
+  width: 32px; 
+  height: 32px; 
 }
 
-/* Aktifkan saat tombol dipilih */
 .grid-toggle-button.active {
   background-color: #3d4466;
   border-radius: 0;
 }
 
-/* Ikon grid */
 .grid-icon {
   display: grid;
   place-items: center;

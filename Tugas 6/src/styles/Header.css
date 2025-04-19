@@ -8,7 +8,7 @@
 .logo {
   width: 97px;
   height: 35px;
-  margin-top: -15px; /* naikin logo ke atas sedikit */
+  margin-top: -15px; 
   object-fit: contain;
 }
 
@@ -34,16 +34,16 @@
 }
 
 .search-input {
-  background-color: #ffffff;  /* warna latar belakang gelap */
-  border: 1px solid #3D4466;     /* garis tepi */
+  background-color: #ffffff;  
+  border: 1px solid #3D4466;     
   padding: 6px 10px;
-  border-radius: 8px;         /* bikin ujung kotak jadi rounded */
+  border-radius: 8px;        
   font-size: 14px;
-  width: 144px;               /* ubah lebar input */
+  width: 144px;               
   transition: all 0.3s ease;
   outline: none;
 }
 
 .search-input::placeholder {
-  color: #888;                /* warna placeholder */
+  color: #888;               
 }

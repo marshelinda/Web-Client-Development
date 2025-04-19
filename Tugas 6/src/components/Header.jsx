@@ -1,13 +1,12 @@
-// components/Header.jsx
 import React, { useState, useContext } from "react";
 import { PokemonContext } from "../context/PokemonContext";
-import logo from "../assets/pokemon-logo.png"; // pastikan path logo sesuai
+import logo from "../assets/pokemon-logo.png"; 
 import "../styles/Header.css";
 
 const Header = () => {
-  const { searchTerm, setSearchTerm } = useContext(PokemonContext); // gunakan context
+  const { searchTerm, setSearchTerm } = useContext(PokemonContext); 
   const [showInput, setShowInput] = useState(false);
-  const [searchValue, setSearchValue] = useState(searchTerm); // nilai awal dari searchTerm
+  const [searchValue, setSearchValue] = useState(searchTerm); 
 
   const handleSearchClick = () => {
     setShowInput(true);
@@ -16,11 +15,10 @@ const Header = () => {
   const handleChange = (e) => {
     const value = e.target.value;
     setSearchValue(value);
-    setSearchTerm(value); // update searchTerm di context
+    setSearchTerm(value); 
   };
 
   const handleBlur = () => {
-    // Kalau input kosong, balik ke tombol search
     if (searchValue.trim() === "") {
       setShowInput(false);
     }
@@ -53,7 +51,7 @@ const Header = () => {
             placeholder="Search Pokémon"
             value={searchValue}
             onChange={handleChange}
-            onBlur={handleBlur} // saat kehilangan fokus, balik ke icon
+            onBlur={handleBlur} 
             autoFocus
           />
         )}

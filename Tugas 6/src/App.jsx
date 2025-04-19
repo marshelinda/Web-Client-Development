@@ -8,11 +8,7 @@ import "./styles/App.css";
 const App = () => {
   const [pokemons, setPokemons] = useState([]);
   const { selectedPokemon } = useContext(PokemonContext);
-  
-  // State untuk layout (One Grid / Two Grid)
   const [layout, setLayout] = useState("one");
-  
-  // State untuk sorting
   const [sortBy, setSortBy] = useState("default");
 
   useEffect(() => {
@@ -39,14 +35,13 @@ const App = () => {
     <div className="app">
       <Header />
       <div className="main-content">
-        {/* Menampilkan Pokémon List atau Detail berdasarkan status selectedPokemon */}
         {!selectedPokemon ? (
           <PokemonList
             pokemons={pokemons}
-            layout={layout}           // Mengirimkan layout ke PokemonList
-            setLayout={setLayout}     // Mengirimkan setLayout ke PokemonList
-            sortBy={sortBy}           // Mengirimkan sortBy ke PokemonList
-            setSortBy={setSortBy}     // Mengirimkan setSortBy ke PokemonList
+            layout={layout}           
+            setLayout={setLayout}     
+            sortBy={sortBy}           
+            setSortBy={setSortBy}     
           />
         ) : (
           <PokemonDetail />

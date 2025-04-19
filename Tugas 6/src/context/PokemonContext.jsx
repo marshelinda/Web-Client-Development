@@ -7,7 +7,7 @@ export const PokemonProvider = ({ children }) => {
   const [selectedPokemon, setSelectedPokemon] = useState(null);
   const [layout, setLayout] = useState("one");
   const [sortBy, setSortBy] = useState("default");
-  const [searchTerm, setSearchTerm] = useState(""); // state untuk search
+  const [searchTerm, setSearchTerm] = useState(""); 
 
   useEffect(() => {
     const fetchPokemons = async () => {

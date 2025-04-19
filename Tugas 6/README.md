@@ -93,3 +93,9 @@ Aplikasi Pokémon ini dibangun menggunakan React dan memanfaatkan React Hooks, C
      ```
 
 Aplikasi akan berjalan di `http://localhost:5173`.
+
+## Live Code Demo
+
+Untuk melihat versi demo dari aplikasi ini secara langsung:
+
+🔗 Demo Langsung: [Pokemon App](https://pokemon-app-nine-virid.vercel.app/)
